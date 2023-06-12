@@ -1,0 +1,6 @@
+FROM ubuntu:20.04
+RUN apt-get update && apt-get install -y python3
+WORKDIR /app
+COPY script_python.py .
+ENV MY_VARIABLE=value
+CMD ["python3", "script_python.py"]
